@@ -21,7 +21,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
+      gap: 15px;
     }
 
     li {
@@ -52,12 +52,12 @@
 
     li {
       position: relative;
-      width: 30px;
+      width: 30%;
 
       h4 {
         position: absolute;
         top: 50%;
-        transform: translate(-50%);
+        transform: translateY(-60%);
         padding: 20px 10px;
         background-color: transparentize($color: #000000, $amount: 0.2);
         color: #fff;
@@ -73,7 +73,7 @@
 
     img {
       width: 100%;
-      height: 200px;
+      height: 300px;
       border-radius: 10px;
       object-fit: cover;
     }

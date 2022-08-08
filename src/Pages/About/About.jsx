@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import {
   FaHtml5,
   FaCss3,
@@ -21,7 +22,18 @@ function About() {
     <section className="about">
       <div className="container">
         <div className="about__intro">
-          <h1>Hello, I'm Makhabat</h1>
+          <motion.h1
+            animate={{ rotate: 360 }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              repeatDelay: 2,
+              repeatType: "reverse",
+              type: "spring",
+            }}
+          >
+            Hello, I'm Makhabat
+          </motion.h1>
           <p>Frontend React Developer</p>
         </div>
 
