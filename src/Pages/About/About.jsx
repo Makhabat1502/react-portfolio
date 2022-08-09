@@ -18,6 +18,42 @@ import Porfolio3 from "../../images/portfolio-3.PNG";
 import "./about.scss";
 
 function About() {
+  const h3Variants = {
+    hidden: {
+      x: -1000,
+      opacity: 0,
+    },
+    visible: {
+      x: 0,
+      opacity: 1,
+    },
+  };
+
+  const workVariants = {
+    visible: (idx) => ({
+      opacity: 1,
+      transition: {
+        delay: idx * 0.6,
+      },
+    }),
+    hidden: { opacity: 0 },
+  };
+
+  const works = [
+    {
+      title: "CloudBudget",
+      imgUrl: Porfolio1,
+    },
+    {
+      title: "Loan Calculator",
+      imgUrl: Porfolio2,
+    },
+    {
+      title: "GitHub API project",
+      imgUrl: Porfolio3,
+    },
+  ];
+
   return (
     <section className="about">
       <div className="container">
@@ -38,7 +74,16 @@ function About() {
         </div>
 
         <div className="about__skills">
-          <h3>My Skills</h3>
+          <motion.h3
+            variants={h3Variants}
+            initial={"hidden"}
+            animate={"visible"}
+            transition={{
+              duration: 1,
+            }}
+          >
+            My Skills
+          </motion.h3>
           <ul>
             <li>
               <FaHtml5 />
@@ -82,18 +127,18 @@ function About() {
         <div className="about__portfolio">
           <h3>Latest works</h3>
           <ul>
-            <li>
-              <img src={Porfolio1} alt="" />
-              <h4>CloudBudget</h4>
-            </li>
-            <li>
-              <img src={Porfolio2} alt="" />
-              <h4>Loan Calculator</h4>
-            </li>
-            <li>
-              <img src={Porfolio3} alt="" />
-              <h4>GitHub API project</h4>
-            </li>
+            {works.map((work, idx) => (
+              <motion.li
+                variants={workVariants}
+                initial={"hidden"}
+                animate={"visible"}
+                key={idx}
+                custom={idx}
+              >
+                <img src={work.imgUrl} alt="" />
+                <h4>{work.title}</h4>
+              </motion.li>
+            ))}
           </ul>
         </div>
       </div>
