@@ -2,8 +2,8 @@
   text-align: center;
 
   &__intro {
-    margin-bottom: 45px;
-    padding-top: 45px;
+    margin-bottom: 35px;
+    padding-top: 35px;
 
     h1,
     p {
@@ -12,7 +12,7 @@
   }
 
   &__skills {
-    margin-bottom: 45px;
+    margin-bottom: 35px;
 
     ul {
       margin: 0;
@@ -27,7 +27,7 @@
     li {
       background-color: #000;
       color: #fff;
-      padding: 10px 35px;
+      padding: 6px 18px;
       border-radius: 6px;
       box-shadow: 0 5px 5px -5px rgba(5, 240, 37, 0.8);
       display: flex;
@@ -35,7 +35,7 @@
       gap: 5px;
 
       svg {
-        font-size: 1.5em;
+        font-size: 1.3em;
       }
     }
   }

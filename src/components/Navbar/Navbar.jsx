@@ -24,8 +24,8 @@ function Navbar() {
     },
     {
       id: 2,
-      menu: "projects",
-      link: "projects",
+      menu: "blog",
+      link: "blog",
     },
     {
       id: 3,
