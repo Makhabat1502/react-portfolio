@@ -1,0 +1,22 @@
+.contact {
+  &__container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 3em;
+  }
+
+  &__col {
+    width: 550px;
+  }
+
+  form {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+  }
+}
